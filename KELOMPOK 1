@@ -1,0 +1,133 @@
+from pptx import Presentation
+from pptx.util import Inches
+
+# Buat presentasi baru
+prs = Presentation()
+
+# Fungsi helper untuk menambah slide dengan judul dan isi
+def add_slide(title, content_list, layout_idx=1):
+    slide_layout = prs.slide_layouts[layout_idx]  # 1 = Title and Content
+    slide = prs.slides.add_slide(slide_layout)
+    title_placeholder = slide.shapes.title
+    title_placeholder.text = title
+    content_placeholder = slide.placeholders[1]
+    content_placeholder.text = "\n".join(content_list)
+
+# Slide 1: Judul
+add_slide("Bab 2: Demokrasi Berdasarkan UUD NRI Tahun 1945\nA. Periodisasi Pemberlakuan UUD di Indonesia", ["“Memahami perjalanan konstitusi Indonesia dari masa ke masa.”"])
+
+# Slide 2: Tujuan Pembelajaran
+add_slide("Tujuan Pembelajaran", [
+    "1. Menjelaskan sejarah pemberlakuan UUD di Indonesia.",
+    "2. Mengidentifikasi perubahan-perubahan penting dalam tiap periode.",
+    "3. Menunjukkan sikap demokratis berdasarkan nilai Pancasila dan UUD NRI Tahun 1945."
+])
+
+# Slide 3: Pengantar
+add_slide("Pengantar", [
+    "UUD adalah hukum dasar tertulis negara.",
+    "Sejak 1945, Indonesia mengalami lima periode pemberlakuan UUD.",
+    "Setiap periode mencerminkan perkembangan politik dan sistem pemerintahan."
+])
+
+# Slide 4: Periodisasi UUD di Indonesia
+add_slide("Periodisasi UUD di Indonesia", [
+    "1. UUD 1945 (18 Agustus 1945 – 27 Desember 1949)",
+    "2. Konstitusi RIS (27 Desember 1949 – 17 Agustus 1950)",
+    "3. UUDS 1950 (17 Agustus 1950 – 5 Juli 1959)",
+    "4. UUD 1945 (5 Juli 1959 – 1998)",
+    "5. UUD NRI 1945 Hasil Amandemen (1999 – Sekarang)"
+])
+
+# Slide 5: Periode I
+add_slide("Periode I: UUD 1945 (1945–1949)", [
+    "Ditetapkan oleh PPKI pada 18 Agustus 1945.",
+    "Sistem pemerintahan: presidensial.",
+    "Masa revolusi dan mempertahankan kemerdekaan.",
+    "Presiden memegang kekuasaan besar karena keadaan darurat."
+])
+
+# Slide 6: Ciri-Ciri UUD 1945 Asli
+add_slide("Ciri-Ciri UUD 1945 Asli", [
+    "Belum ada lembaga MPR dan DPR secara utuh.",
+    "Presiden menjalankan kekuasaan legislatif bersama KNIP.",
+    "Pemerintahan lebih bersifat sementara.",
+    "Fokus utama: menjaga kedaulatan dan keamanan negara."
+])
+
+# Slide 7: Periode II
+add_slide("Periode II: Konstitusi RIS (1949–1950)", [
+    "Diberlakukan setelah Konferensi Meja Bundar (KMB).",
+    "Indonesia berubah menjadi negara federal.",
+    "Terdiri dari beberapa negara bagian (NIT, Pasundan, Jawa Timur, dll).",
+    "Sistem pemerintahan parlementer."
+])
+
+# Slide 8: Dampak Konstitusi RIS
+add_slide("Dampak Konstitusi RIS", [
+    "Banyak negara bagian ingin kembali ke bentuk kesatuan.",
+    "Muncul konflik antarnegara bagian.",
+    "Akhirnya disepakati pembentukan Negara Kesatuan Republik Indonesia (NKRI)."
+])
+
+# Slide 9: Periode III
+add_slide("Periode III: UUDS 1950 (1950–1959)", [
+    "Berlaku mulai 17 Agustus 1950.",
+    "Bentuk negara kembali menjadi kesatuan.",
+    "Sistem pemerintahan: parlementer.",
+    "Presiden hanya sebagai kepala negara.",
+    "Kabinet sering berganti → politik tidak stabil."
+])
+
+# Slide 10: Dekret Presiden 5 Juli 1959
+add_slide("Dekret Presiden 5 Juli 1959", [
+    "Konstituante gagal menyusun UUD baru.",
+    "Presiden Soekarno mengeluarkan Dekret Presiden:",
+    "1. Membubarkan Konstituante.",
+    "2. Menetapkan berlakunya kembali UUD 1945.",
+    "3. Tidak berlaku lagi UUDS 1950."
+])
+
+# Slide 11: Periode IV
+add_slide("Periode IV: UUD 1945 (1959–1998)", [
+    "Dikenal sebagai masa Demokrasi Terpimpin dan Orde Baru.",
+    "UUD dijalankan formal, tetapi banyak penyimpangan demokrasi.",
+    "Kekuasaan presiden sangat besar.",
+    "Rakyat tidak memiliki kebebasan politik yang luas."
+])
+
+# Slide 12: Periode V
+add_slide("Periode V: UUD NRI 1945 Hasil Amandemen (1999–Sekarang)", [
+    "Reformasi 1998 mendorong perubahan sistem politik.",
+    "UUD 1945 diamandemen empat kali (1999–2002).",
+    "Tujuan: memperkuat demokrasi, membatasi kekuasaan presiden, menjamin HAM."
+])
+
+# Slide 13: Pokok Perubahan Hasil Amandemen
+add_slide("Pokok Perubahan Hasil Amandemen", [
+    "Pemilihan presiden langsung oleh rakyat.",
+    "Pembentukan DPD dan Mahkamah Konstitusi (MK).",
+    "Penguatan peran DPR.",
+    "Jaminan HAM lebih luas.",
+    "Pembatasan masa jabatan presiden (2 periode)."
+])
+
+# Slide 14: Dampak Amandemen UUD
+add_slide("Dampak Amandemen UUD", [
+    "Meningkatkan keterbukaan dan partisipasi rakyat.",
+    "Pemerintahan lebih transparan dan akuntabel.",
+    "Penegakan hukum dan HAM semakin kuat.",
+    "Demokrasi konstitusional semakin kokoh."
+])
+
+# Slide 15: Kesimpulan
+add_slide("Kesimpulan", [
+    "UUD Indonesia mengalami 5 fase penting sesuai dinamika bangsa.",
+    "Amandemen dilakukan agar sesuai dengan semangat reformasi dan Pancasila.",
+    "UUD NRI Tahun 1945 hasil amandemen menjadi dasar kuat bagi kehidupan demokrasi modern di Indonesia.",
+    "“Konstitusi berubah, tetapi semangat Pancasila tetap abadi.”"
+])
+
+# Simpan presentasi
+prs.save('Demokrasi_UUD_Indonesia.pptx')
+print("PPT berhasil dibuat: Demokrasi_UUD_Indonesia.pptx")
